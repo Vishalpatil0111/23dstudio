@@ -69,7 +69,7 @@ function Sliding() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-[95vw] md:w-[80vw] h-[75vh] md:h-[90vh] flex-shrink-0 relative rounded-xl overflow-hidden shadow-lg"
+            className="w-[95vw] md:w-[80vw] h-[75vh] md:h-[90vh] flex-shrink-0 relative rounded overflow-hidden shadow-lg"
           >
             <img
               src={slide.image}

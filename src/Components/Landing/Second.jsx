@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import Button from '../../assets/Button';
 
+import AnimatedButton from '../AnimatedButton';
 gsap.registerPlugin(ScrollTrigger);
 
 function Second() {
@@ -63,7 +63,7 @@ function Second() {
           From concept to execution, 23Dstudio is driven by a passion for detail, innovation, and impactful design.
         </p>
         <div className='mt-5'>
-           <Button label="About us" route="/about"/>
+           <AnimatedButton label="About us" route="/about"/>
 
         </div>
  

@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useNavigate } from 'react-router-dom';
 
-function Button({
+function AnimatedButton({
   label = "Click Me",
   route = "/",
   borderColor = "#ea580c",   // default: Tailwind orange-500
@@ -80,4 +80,4 @@ function Button({
   );
 }
 
-export default Button;
+export default AnimatedButton;

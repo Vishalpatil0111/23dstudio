@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+*{
+ font-family: poppins;  
+}
+
+span{
+    display: inline-block;
+}
+

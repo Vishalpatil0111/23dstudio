@@ -44,7 +44,7 @@ function MenuPage(props) {
   return (
     <div
       ref={menuRef}
-      className='w-full h-full fixed left-full flex flex-col md:flex-row pl-5 md:pl-20 z-50 overflow-y-auto md:overflow-hidden'
+      className='w-full h-full fixed left-full flex flex-col md:flex-row bg-black pl-5 md:pl-20 z-50 overflow-y-auto md:overflow-hidden'
     >
       {/* Mobile Background Image */}
       <div className='block md:hidden absolute inset-0 z-0'>

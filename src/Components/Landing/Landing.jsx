@@ -38,7 +38,7 @@ function Landing() {
   return (
     <div className='w-full h-screen flex flex-col items-center justify-center'>
       <div className='flex flex-col h-fit  justify-center items-center '>
-        <h1 ref={textRef} className='whitespace-nowrap px-7 leading-none text-[#f7efcd] text-[10vh] sm:text-[15vh] md:text-[24vh] font-bold uppercase'>23DStudio</h1>
+        <h1 ref={textRef} className='whitespace-nowrap px-7 leading-none text-[#f7efcd] text-[9vh] sm:text-[15vh] md:text-[24vh] font-bold uppercase'>23DStudio</h1>
         
       </div>
       

@@ -31,11 +31,11 @@ function Landing() {
   }, []);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-black">
+    <div className="w-full h-screen flex flex-col items-center justify-center ">
       <div className="flex flex-col justify-center items-center px-2 sm:px-4">
         <h1
           ref={textRef}
-          className="whitespace-nowrap leading-none text-[#f7efcd] text-4xl sm:text-7xl md:text-[15vh] lg:text-[24vh] font-bold uppercase text-center"
+          className="whitespace-nowrap leading-none text-[#f7efcd] text-5xl sm:text-7xl md:text-[15vh] lg:text-[24vh] font-bold uppercase text-center"
         >
           23DStudio
         </h1>

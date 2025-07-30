@@ -48,7 +48,7 @@ function MenuPage(props) {
     >
       {/* Mobile Background Image */}
       <div className='block md:hidden absolute inset-0 z-0'>
-        <img src="./images/menuproduct.jpg" alt="Menu BG" className='w-full h-full object-cover' />
+        <img src="/images/menuproduct.jpg" alt="Menu BG" className='w-full h-full object-cover' />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 

@@ -7,14 +7,14 @@ import { NavLink } from 'react-router-dom'
 
 function MenuPage(props) {
   const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/work', label: 'Work' },
-  { to: '/work-flow', label: 'WorkFlow' },
-  { to: '/about', label: 'About' },
-  { to: '/services', label: 'Services' },
-  { to: '/career', label: 'Career' },
-  { to: '/contact', label: 'Contact' },
-];
+    { to: '/', label: 'Home' },
+    { to: '/work', label: 'Work' },
+    { to: '/work-flow', label: 'WorkFlow' },
+    { to: '/about', label: 'About' },
+    { to: '/services', label: 'Services' },
+    { to: '/career', label: 'Career' },
+    { to: '/contact', label: 'Contact' },
+  ];
 
   const menuRef = useRef(null)
   const closeRef = useRef(null);
@@ -56,14 +56,14 @@ function MenuPage(props) {
 
       {/* NavLinks Section */}
       <div
-        className='w-full md:w-full h-screen relative p-5 flex flex-col justify-center items-start space-y-4 z-10'
+        className='w-full md:w-full h-screen relative p-5 flex flex-col justify-center items-start space-y-4  z-10'
         onClick={() => props.setMenu(false)}
       >
-       { navLinks.map(({ to, label }) => (
+        {navLinks.map(({ to, label }) => (
           <NavLink
             key={to}
             to={to}
-            className="text-xl md:text-2xl font-medium text-white hover:text-orange-500 transition-all duration-200"
+            className="text-xl  md:text-4xl pl-8 font-bold text-white hover:text-orange-500 transition-all duration-200"
           >
             {label}
           </NavLink>

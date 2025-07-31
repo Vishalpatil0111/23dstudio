@@ -75,7 +75,7 @@ function MenuPage(props) {
       </div>
 
       {/* Desktop Image + Close Button */}
-      <div className='hidden md:block w-full md:w-2/3 h-screen bg-cover bg-center bg-[url("/images/menuproduct.jpg")]'>
+      <div className='block w-full md:w-2/3 h-screen bg-cover bg-center bg-[url("/images/menuproduct.jpg")]'>
         <button
           ref={closeRef}
           onClick={() => props.setMenu(false)}

@@ -31,6 +31,18 @@ function Sliding() {
       text: 'From concept to prototype — functional, aesthetic solutions.',
       route: '/work',
     },
+    {
+      image: '/images/1.png',
+      heading: 'Architectural Visualization',
+      text: 'Transforming blueprints into stunning, photorealistic 3D visuals',
+      route: '/services',
+    },
+    {
+      image: '/images/menuproduct.jpg',
+      heading: 'Interior Design',
+      text: 'Crafting inspiring interior spaces with elegance and function.',
+      route: '/about',
+    },
   ];
 
   // Detect mobile
@@ -100,7 +112,7 @@ function Sliding() {
           <div
             key={index}
             ref={(el) => (mobileRefs.current[index] = el)}
-            className="w-full h-[80vh] relative rounded-lg overflow-hidden shadow-lg"
+            className="w-full h-[70vh] relative rounded-lg overflow-hidden shadow-lg"
           >
             <img src={slide.image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
             <div className="absolute bottom-4 right-4 bg-black/60 text-white p-3 rounded max-w-sm">
@@ -121,12 +133,12 @@ function Sliding() {
     <div ref={containerRef} className="w-full h-screen overflow-hidden relative ">
       <div
         ref={sliderRef}
-        className="flex w-max h-full items-center gap-x-8 px-10"
+        className="flex w-max h-full items-center gap-x-4 p-2"
       >
         {slides.map((slide, index) => (
           <div
             key={index}
-            className="w-[80vw] h-[90vh] flex-shrink-0 relative rounded-xl overflow-hidden shadow-lg"
+            className="w-[80vw] h-full flex-shrink-0 relative  overflow-hidden shadow-lg"
           >
             <img
               src={slide.image}

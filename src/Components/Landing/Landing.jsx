@@ -11,10 +11,10 @@ function Landing() {
 
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                       flex flex-col gap-4 justify-center items-center px-4 text-center">
-        <h2 className="text-xl sm:text-2xl md:text-4xl font-light drop-shadow-lg">
+        <h2 className="text-3xl md:text-4xl font-light drop-shadow-lg">
           Aesthetic Storytelling, Powered By
         </h2>
-        <h1 className="text-xl sm:text-2xl md:text-4xl font-semibold  drop-shadow-lg">
+        <h1 className="text-3xl md:text-4xl font-semibold  drop-shadow-lg">
           Smart tech
         </h1>
 

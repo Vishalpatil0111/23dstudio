@@ -33,7 +33,7 @@ function CenterLogo() {
         <div>
             <div ref={divRef} className='h-screen flex  justify-center items-center bg-zinc-50 w-full z-20 fixed'>
 
-                <div ref={textRef} className='w-60 h-60 sm:w-70 sm:h-70 flex items-center justify-center z-20'>
+                <div ref={textRef} className='w-30 h-30 sm:w-50 sm:h-50 flex items-center justify-center z-20'>
                     <img className='w-full h-full object-cover' srcSet="./images/Logo.png" alt="firm Logo"  />
                 </div>
 

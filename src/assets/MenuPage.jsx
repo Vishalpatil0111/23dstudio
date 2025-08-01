@@ -48,13 +48,13 @@ function MenuPage(props) {
     >
       {/* Background Image with Overlay */}
       <div className='absolute inset-0 bg-amber-400'>
-        <img src="" alt="Menu Background" className='w-full h-full object-cover' />
+        <img src="/images/menubg.png" alt="Menu Background" className='w-full h-full object-cover' />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
       {/* Logo Top Left */}
       <div className='absolute top-4 left-4 z-10 w-12 h-12 sm:w-14 sm:h-14'>
-        <img src="/images/Logo.png" alt="Logo" className='w-full h-full object-cover' />
+        <img src="/images/logoblack.jpg" alt="Logo" className='w-full h-full object-cover' />
       </div>
 
       {/* NavLinks Centered */}
@@ -81,7 +81,7 @@ function MenuPage(props) {
       <button
         ref={closeRef}
         onClick={() => props.setMenu(false)}
-        className='text-white absolute top-4 right-4 cursor-pointer z-10 p-2'
+        className='text-white absolute top-6 right-4 cursor-pointer z-10 p-2'
       >
         <RiCloseLargeFill size={28} />
       </button>

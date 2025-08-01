@@ -31,14 +31,14 @@ function Home() {
     return (
         <div className=''>
             <CenterLogo />
-            <div ref={pageRef} className='opacity-0 h-full bg-center bg-cover bg-[url("https://images.unsplash.com/photo-1615875605825-5eb9bb5d52ac?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")] w-full  '>
+            <div ref={pageRef}>
 
-            <Landing />
+                <Landing />
             </div>
-            <Second/>
-            <Sliding/>
-            <Third/>
-            
+            <Second />
+            <Sliding />
+            <Third />
+
 
         </div>
     )

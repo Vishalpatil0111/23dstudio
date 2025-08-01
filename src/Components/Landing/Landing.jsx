@@ -1,52 +1,26 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import React, { useRef } from 'react';
+import React from 'react';
 
 function Landing() {
-  const textRef = useRef(null);
-  const subRef = useRef(null);
-
-  useGSAP(() => {
-    let clutter = '';
-    const splittedText = textRef.current.textContent.split('');
-
-    splittedText.forEach((e) => {
-      clutter += `<span>${e}</span>`; // Corrected closing tag
-    });
-
-    textRef.current.innerHTML = clutter;
-
-    gsap.from(textRef.current.querySelectorAll('span'), {
-      y: 100,
-      opacity: 0,
-      delay: 0.7,
-      stagger: 0.08,
-    });
-
-    gsap.to(subRef.current, {
-      opacity: 1,
-      delay: 1.9,
-      duration: 0.6,
-    });
-  }, []);
-
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center ">
-      <div className="flex flex-col justify-center items-center px-2 sm:px-4">
-        <h1
-          ref={textRef}
-          className="whitespace-nowrap leading-none text-[#f7efcd] text-5xl sm:text-7xl md:text-[15vh] lg:text-[24vh] font-bold uppercase text-center"
-        >
-          23DStudio
-        </h1>
+    <div className="relative flex justify-center items-center w-full h-screen">
+
+      <div className="w-full h-full">
+        <img className="absolute w-full h-full object-cover" src="" alt="Background" />
       </div>
 
-      <h3
-        ref={subRef}
-        className="opacity-0 mt-4 text-sm sm:text-base md:text-lg px-3 sm:px-6 md:px-8 bg-zinc-100 text-black text-center rounded-md"
-      >
-        Design Is Everywhere — We Make It Exceptional
-      </h3>
+
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                      flex flex-col gap-4 justify-center items-center px-4 text-center">
+        <h2 className="text-xl sm:text-2xl md:text-4xl font-light drop-shadow-lg">
+          Aesthetic Storytelling, Powered By
+        </h2>
+        <h1 className="text-xl sm:text-2xl md:text-4xl font-semibold  drop-shadow-lg">
+          Smart tech
+        </h1>
+
+
+        <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-blue-300 mt-2" />
+      </div>
     </div>
   );
 }

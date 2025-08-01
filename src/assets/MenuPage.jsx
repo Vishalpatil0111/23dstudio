@@ -44,17 +44,22 @@ function MenuPage(props) {
   return (
     <div
       ref={menuRef}
-      className='w-full h-full fixed left-full flex flex-col md:flex-row bg-black pl-5 md:pl-20 z-50 overflow-y-auto md:overflow-hidden'
+      className='w-full h-full fixed left-full z-50  overflow-hidden'
     >
-      {/* Mobile Background Image */}
-      <div className='block md:hidden absolute inset-0 z-0'>
-        <img src="/images/menuproduct.jpg" alt="Menu BG" className='w-full h-full object-cover' />
+      {/* Background Image with Overlay */}
+      <div className='absolute inset-0 bg-amber-400'>
+        <img src="" alt="Menu Background" className='w-full h-full object-cover' />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      {/* NavLinks Section */}
+      {/* Logo Top Left */}
+      <div className='absolute top-4 left-4 z-10 w-12 h-12 sm:w-14 sm:h-14'>
+        <img src="/images/Logo.png" alt="Logo" className='w-full h-full object-cover' />
+      </div>
+
+      {/* NavLinks Centered */}
       <div
-        className='w-full md:w-full h-screen relative p-5 flex flex-col justify-center items-start space-y-4 z-10'
+        className='absolute inset-0 flex flex-col justify-center items-center z-10 space-y-6'
         onClick={() => props.setMenu(false)}
       >
         {navLinks.map(({ to, label }, i) => (
@@ -63,10 +68,8 @@ function MenuPage(props) {
             to={to}
             ref={el => (linksRef.current[i] = el)}
             className={({ isActive }) =>
-              `text-2xl md:text-4xl  font-bold transition-all duration-200 
-               relative 
-               ${isActive ? 'text-orange-500' : 'text-white'} 
-               underline-hover`
+              `text-2xl sm:text-3xl md:text-4xl font-bold transition-all duration-200 
+               ${isActive ? 'text-orange-500' : 'text-white'} underline-hover`
             }
           >
             {label}
@@ -74,16 +77,14 @@ function MenuPage(props) {
         ))}
       </div>
 
-      {/* Desktop Image + Close Button */}
-      <div className='block w-full md:w-2/3 h-screen bg-cover bg-center bg-[url("/images/menuproduct.jpg")]'>
-        <button
-          ref={closeRef}
-          onClick={() => props.setMenu(false)}
-          className='text-white absolute top-4 right-4 cursor-pointer z-10 p-2'
-        >
-          <RiCloseLargeFill size={28} />
-        </button>
-      </div>
+      {/* Close Button Top Right */}
+      <button
+        ref={closeRef}
+        onClick={() => props.setMenu(false)}
+        className='text-white absolute top-4 right-4 cursor-pointer z-10 p-2'
+      >
+        <RiCloseLargeFill size={28} />
+      </button>
     </div>
   );
 }

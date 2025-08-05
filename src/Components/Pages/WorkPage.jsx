@@ -41,7 +41,7 @@ function WorkPage() {
       stagger: 0.2,
       ease: 'power2.out',
     });
-    gsap.to(serviceRefs.current, {
+    gsap.from(serviceRefs.current, {
     opacity: 100,
     x: 0,
     duration: 1,
@@ -50,6 +50,7 @@ function WorkPage() {
     delay: 1,
     clearProps: 'all',
   });
+    
   }, []);
 
   useEffect(() => {
@@ -69,22 +70,22 @@ function WorkPage() {
   }, [hoverImg]);
 
   useEffect(() => {
-    // Animate service list items from right to left with fade-in
+    
     gsap.from(serviceRefs.current, {
       opacity: 0,
       x: 50,
       duration: 1,
       stagger: 0.2,
       ease: 'power2.out',
-      delay: 1, // starts after left side animation
+      delay: 1, 
     });
   }, []);
 
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 py-16 bg-white gap-12">
+    <div className="relative w-full  max-w-screen overflow-hidden  min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 py-16 bg-white gap-12">
       {/* Hover Image Preview */}
-      <div className="absolute top-0 right-0 w-full md:w-1/2 h-full pointer-events-none z-0">
+<div className=" md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
         {hoverImg && (
           <img
             ref={imgRef}

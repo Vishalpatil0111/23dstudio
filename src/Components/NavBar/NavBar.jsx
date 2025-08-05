@@ -17,7 +17,7 @@ function NavBar(props) {
       
       {/* Menu Button */}
       <button onClick={HandleMenu} 
-              className='py-2 px-6 border-2 border-black cursor-pointer'>
+              className='py-2 px-5  border-3 border-black cursor-pointer'>
       </button>
     </div>
   );

@@ -3,6 +3,14 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { RiCloseLargeFill } from '@remixicon/react';
 import { NavLink } from 'react-router-dom';
+import {
+  FaLinkedin,
+  FaXTwitter,
+  FaFacebook,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+} from 'react-icons/fa6';
 
 function MenuPage(props) {
   const navLinks = [
@@ -44,20 +52,20 @@ function MenuPage(props) {
   return (
     <div
       ref={menuRef}
-      className='w-full h-full fixed left-full z-50  overflow-hidden'
+      className='w-full h-full fixed left-full z-50 overflow-hidden'
     >
-      {/* Background Image with Overlay */}
+      {/* Background Image */}
       <div className='absolute inset-0 bg-amber-400'>
         <img src="/images/menubg.png" alt="Menu Background" className='w-full h-full object-cover' />
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
-      {/* Logo Top Left */}
+      {/* Logo */}
       <div className='absolute top-4 left-4 z-10 w-12 h-12 sm:w-14 sm:h-14'>
         <img src="/images/logoblack.jpg" alt="Logo" className='w-full h-full object-cover' />
       </div>
 
-      {/* NavLinks Centered */}
+      {/* Nav Links */}
       <div
         className='absolute inset-0 flex flex-col justify-center items-center z-10 space-y-6'
         onClick={() => props.setMenu(false)}
@@ -77,7 +85,7 @@ function MenuPage(props) {
         ))}
       </div>
 
-      {/* Close Button Top Right */}
+      {/* Close Button */}
       <button
         ref={closeRef}
         onClick={() => props.setMenu(false)}
@@ -85,6 +93,28 @@ function MenuPage(props) {
       >
         <RiCloseLargeFill size={28} />
       </button>
+
+      {/* Social Icons at Bottom Center */}
+      <div className='absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 flex gap-4 text-xl sm:text-2xl text-white'>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+          <FaLinkedin />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          <FaXTwitter />
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+          <FaFacebook />
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
+          <FaInstagram />
+        </a>
+        <a href="https://wa.me/917620703298" target="_blank" rel="noopener noreferrer" className="hover:text-green-500">
+          <FaWhatsapp />
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-red-500">
+          <FaYoutube />
+        </a>
+      </div>
     </div>
   );
 }

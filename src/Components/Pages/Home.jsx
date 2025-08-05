@@ -6,6 +6,7 @@ import Landing from '../Landing/Landing'
 import Second from '../Landing/Second'
 import Sliding from '../Landing/Sliding'
 import Third from '../Landing/Third'
+import Footer from '../Footer'
 
 
 function Home() {
@@ -38,6 +39,7 @@ function Home() {
             <Second />
             <Sliding />
             <Third />
+            <Footer/>
 
 
         </div>

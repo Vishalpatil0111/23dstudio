@@ -27,13 +27,12 @@ const services = [
 
 function WorkPage() {
   const linesRef = useRef([]);
-  const [hoverImg, setHoverImg] = useState(null);
-  const imgRef = useRef(null);
   const serviceRefs = useRef([]);
-
+  const imgRef = useRef(null);
+  const [hoverImg, setHoverImg] = useState(null);
 
   useEffect(() => {
-    // Animate left text lines one by one
+    // Left headline animation
     gsap.from(linesRef.current, {
       opacity: 0,
       y: 50,
@@ -41,19 +40,20 @@ function WorkPage() {
       stagger: 0.2,
       ease: 'power2.out',
     });
-    gsap.from(serviceRefs.current, {
-    opacity: 100,
-    x: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: 'power2.out',
-    delay: 1,
-    clearProps: 'all',
-  });
-    
+
+    // Right service items animation
+    gsap.to(serviceRefs.current, {
+      opacity: 100,
+      y: 20,
+      duration: 1,
+      stagger: 0.2,
+      ease: 'power2.out',
+      delay: 1,
+    });
   }, []);
 
   useEffect(() => {
+    // Hover image fade in/out
     if (hoverImg) {
       gsap.to(imgRef.current, {
         opacity: 1,
@@ -69,23 +69,11 @@ function WorkPage() {
     }
   }, [hoverImg]);
 
-  useEffect(() => {
-    
-    gsap.from(serviceRefs.current, {
-      opacity: 0,
-      x: 50,
-      duration: 1,
-      stagger: 0.2,
-      ease: 'power2.out',
-      delay: 1, 
-    });
-  }, []);
-
-
   return (
-    <div className="relative w-full  max-w-screen overflow-hidden  min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 py-16 bg-white gap-12">
-      {/* Hover Image Preview */}
-<div className=" md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
+    <div className="relative w-full overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 py-16 bg-white gap-12 max-w-screen-xl mx-auto">
+      
+      {/* Hover Image Preview - Hidden on mobile */}
+      <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
         {hoverImg && (
           <img
             ref={imgRef}
@@ -102,8 +90,9 @@ function WorkPage() {
           <h1
             key={i}
             ref={(el) => (linesRef.current[i] = el)}
-            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight ${line.includes("INNOVATIVE") ? "text-blue-600" : "text-black"
-              }`}
+            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight ${
+              line.includes("INNOVATIVE") ? "text-blue-600" : "text-black"
+            }`}
           >
             {line}
           </h1>
@@ -111,12 +100,12 @@ function WorkPage() {
       </div>
 
       {/* Right - Service List */}
-      <div className="w-full md:w-1/2 flex flex-col divide-y divide-gray-300 z-10">
+      <div className="w-full md:w-1/2  flex flex-col divide-y divide-gray-300 z-10">
         {services.map((service, index) => (
           <div
             key={index}
-            ref={(el) => (serviceRefs.current[index] = el)} // Attach ref here
-            className="flex items-center justify-between py-5 group hover:bg-gray-50 px-2 cursor-pointer transition"
+            ref={(el) => (serviceRefs.current[index] = el)}
+            className="flex  items-center justify-between py-5 group hover:bg-gray-50 px-2 cursor-pointer transition"
             onMouseEnter={() => setHoverImg(service.img)}
             onMouseLeave={() => setHoverImg(null)}
           >
@@ -128,7 +117,6 @@ function WorkPage() {
             </div>
           </div>
         ))}
-
       </div>
     </div>
   );

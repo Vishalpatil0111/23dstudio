@@ -7,7 +7,7 @@ function NavBar(props) {
 
   return (
     <div className='w-full h-15 md:h-20 flex justify-between items-center z-20 
-                    px-5 sm:px-10 fixed bg-white/5 backdrop-blur-[2px] 
+                    px-5 sm:px-10 fixed bg-white/5 
                     border border-white/10 shadow-sm'>
       
       {/* Logo */}

@@ -53,7 +53,7 @@ function WorkPage() {
   }, []);
 
   useEffect(() => {
-   
+    // Hover image fade in/out
     if (hoverImg) {
       gsap.to(imgRef.current, {
         opacity: 1,

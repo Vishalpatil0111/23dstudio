@@ -14,32 +14,32 @@ function Sliding() {
 
   const slides = [
     {
-      image: '/images/1.png',
+      image: '/images/showcase5.jpg',
       heading: 'Architectural Visualization',
       text: 'Transforming blueprints into stunning, photorealistic 3D visuals',
       route: '/services',
     },
     {
-      image: '/images/2.png',
-      heading: 'Interior Design',
+      image: '/images/showcase1.jpg',
+      heading: 'Product Visualization',
       text: 'Crafting inspiring interior spaces with elegance and function.',
       route: '/about',
     },
     {
-      image: '/images/3.jpg',
-      heading: 'Product Design',
+      image: '/images/showcase6.jpg',
+      heading: 'Event & Exhibition Design ',
       text: 'From concept to prototype — functional, aesthetic solutions.',
       route: '/work',
     },
     {
-      image: '/images/1.png',
-      heading: 'Architectural Visualization',
+      image: '/images/showcase2.jpg',
+      heading: 'Brand & Identity Design',
       text: 'Transforming blueprints into stunning, photorealistic 3D visuals',
       route: '/services',
     },
     {
       image: '/images/menuproduct.jpg',
-      heading: 'Interior Design',
+      heading: 'Marketing & Promotional Design',
       text: 'Crafting inspiring interior spaces with elegance and function.',
       route: '/about',
     },
@@ -82,7 +82,7 @@ function Sliding() {
     return () => ctx.revert();
   }, [isMobile]);
 
-  // Mobile: GSAP scroll reveal animation
+  // Mobile: 
   useLayoutEffect(() => {
     if (!isMobile) return;
 
@@ -104,7 +104,7 @@ function Sliding() {
     return () => ctx.revert();
   }, [isMobile]);
 
-  // Mobile View: Flex-column + scroll reveal
+  // Mobile View: 
   if (isMobile) {
     return (
       <div className="w-full min-h-screen  flex flex-col items-center gap-6 p-4">
@@ -128,7 +128,7 @@ function Sliding() {
     );
   }
 
-  // Desktop View: Horizontal scroll
+  // Desktop View: 
   return (
     <div ref={containerRef} className="w-full h-screen overflow-hidden relative ">
       <div

@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaEnvelope, FaPhoneAlt, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Footer from '../Footer'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,8 @@ function Contact() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-white px-4 sm:px-8 md:px-16 py-15 flex flex-col md:flex-row gap-10 items-start">
+     <>
+    <div className="min-h-screen w-full  px-4 sm:px-8 md:px-16 py-15 flex flex-col md:flex-row gap-10 items-start">
       {/* Left - Contact Form */}
       <div ref={formRef} className="w-full md:w-1/2  p-6 sm:p-8 rounded-2xl shadow-md space-y-6">
         <h2 className="text-2xl font-semibold text-gray-800">Get in Touch</h2>
@@ -116,6 +118,8 @@ function Contact() {
         ))}
       </div>
     </div>
+    <Footer/>
+   </>
   );
 }
 

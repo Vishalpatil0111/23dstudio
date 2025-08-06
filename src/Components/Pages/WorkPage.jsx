@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import gsap from 'gsap';
+import Footer from '../Footer'
 
 const services = [
   {
@@ -70,7 +71,8 @@ function WorkPage() {
   }, [hoverImg]);
 
   return (
-    <div className="relative w-full overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 py-16 bg-white gap-12 max-w-screen-xl mx-auto">
+    <>
+    <div className="relative w-full overflow-hidden min-h-screen flex flex-col md:flex-row items-center justify-between px-6 sm:px-12 md:px-20 py-16 gap-12 max-w-screen-xl mx-auto">
       
       {/* Hover Image Preview - Hidden on mobile */}
       <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
@@ -118,7 +120,10 @@ function WorkPage() {
           </div>
         ))}
       </div>
+     
     </div>
+    <Footer/>
+    </>
   );
 }
 

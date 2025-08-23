@@ -58,7 +58,7 @@ function HeroNav() {
              md:flex-row items-center justify-between px-6  sm:px-12 md:px-12 py-12 sm:gap-3 md:gap-5 max-w-screen-xl mx-auto">
 
                 {/* Hover Image Preview - Hidden on mobile */}
-                <div className="hidden md:block absolute top-0  right-0 w-1/2 h-full pointer-events-none z-0">
+                <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
                     {hoverImg && (
                         <img
                             ref={imgRef}
@@ -70,7 +70,7 @@ function HeroNav() {
                 </div>
 
                 {/* Left - Animated Headline */}
-                <div className="w-full md:w-1/2 flex flex-col justify-center bg-yellow-400 z-10">
+                <div className="w-full md:w-1/2 flex flex-col justify-center z-10">
                     {["BLENDING", "CREATIVE", "VISION", "WITH", "INNOVATIVE THINKING."].map((line, i) => (
                         <h1
                             key={i}
@@ -84,7 +84,7 @@ function HeroNav() {
                 </div>
 
                 {/* Right - Service List */}
-                <div className="w-full md:w-1/2  flex flex-col bg-red-300 divide-y divide-gray-300 z-10">
+                <div className="w-full md:w-1/2  flex flex-col divide-y divide-gray-300 z-10">
                     {sections.map((service, index) => (
                         <Link
                             key={index}

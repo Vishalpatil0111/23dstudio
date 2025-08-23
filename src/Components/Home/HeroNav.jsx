@@ -55,7 +55,7 @@ function HeroNav() {
     return (
         <>
             <div className="relative w-full font-[bitum] overflow-hidden min-h-screen flex flex-col
-             md:flex-row items-center justify-between px-6 sm:px-12 md:px-12 py-12 gap-4 sm:gap-12 max-w-screen-xl mx-auto">
+             md:flex-row items-center justify-between px-6 sm:px-12 md:px-12 py-12 gap-4 sm:gap-6 max-w-screen-xl mx-auto">
 
                 {/* Hover Image Preview - Hidden on mobile */}
                 <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">

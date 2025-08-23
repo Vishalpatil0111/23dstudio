@@ -55,10 +55,10 @@ function HeroNav() {
     return (
         <>
             <div className="relative w-full font-[bitum] overflow-hidden min-h-screen flex flex-col
-             md:flex-row items-center justify-between px-6  sm:px-12 md:px-12 py-12 sm:gap-3 md:gap-5 max-w-screen-xl mx-auto">
+             md:flex-row items-center justify-between px-6  sm:px-12 md:px-12 py-6 sm:py-8 md:py-12 sm:gap-3 md:gap-5 max-w-screen-xl mx-auto">
 
                 {/* Hover Image Preview - Hidden on mobile */}
-                <div className="hidden md:block absolute top-0 right-0 w-1/2 h-full pointer-events-none z-0">
+                <div className="hidden md:block absolute inset-0 top-0 right-0 w-1/2 h-full pointer-events-none z-0">
                     {hoverImg && (
                         <img
                             ref={imgRef}
@@ -75,7 +75,7 @@ function HeroNav() {
                         <h1
                             key={i}
                             ref={(el) => (linesRef.current[i] = el)}
-                            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-tight ${line.includes("INNOVATIVE") ? "text-blue-600" : "text-black"
+                            className={`text-3xl sm:text-4xl md:text-5xl font-bold leading-snug sm:leading-tight ${line.includes("INNOVATIVE") ? "text-blue-600" : "text-black"
                                 }`}
                         >
                             {line}
@@ -91,7 +91,7 @@ function HeroNav() {
                             to={`services/work/${service.id}`}
                             onClick={() => window.scrollTo(0, 0)}
                             ref={(el) => (serviceRefs.current[index] = el)}
-                            className="flex items-center justify-between py-5 group hover:bg-gray-50 px-2 cursor-pointer transition"
+                            className="flex items-center justify-between py-3 sm:py-4 md:py-5 group hover:bg-gray-50 px-2 cursor-pointer transition"
                             onMouseEnter={() => setHoverImg(service.image)} 
                             onMouseLeave={() => setHoverImg(null)}          
                         >

@@ -28,8 +28,8 @@ export default function Hero({ images = [], caption  }) {
 
       {/* Caption */}
        {caption && (
-        <div className="absolute bottom-15 md:bottom-20 font-bold tracking-wide left-5 md:left-15 
-         font-[bituml]  text-4xl drop-shadow-lg">
+        <div className="absolute bottom-15 md:bottom-20 font-normal md:font-bold tracking-wide left-5 md:left-15 
+         font-[bituml] text-2xl md:text-4xl drop-shadow-lg">
           {caption}
         </div>
       )}
